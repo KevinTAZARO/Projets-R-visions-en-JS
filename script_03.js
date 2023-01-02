@@ -6222,6 +6222,10 @@ console.log(`Chiffre d'affaires total: ${totalRevenue / 100}€`);
 const frenchUsers = users.filter(user => user.country === 'France');
 console.log(`Nombre d'utilisateurs en France: ${frenchUsers.length}`);
 
+// Calcul du nombre de clients payants en France
+const payingFrenchUsers = frenchUsers.filter(user => user.revenue > 0);
+console.log(`Nombre de clients payants en France: ${payingFrenchUsers.length}`);
+
 // Calcul du chiffre d'affaires dans les 4 pays les plus représentés
 const topFourCountries = ['Germany', 'France', 'United Kingdom', 'United States'];
 const revenueByCountry = {};
